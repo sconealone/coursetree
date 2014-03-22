@@ -1,0 +1,1 @@
+facultyCredits = 20
