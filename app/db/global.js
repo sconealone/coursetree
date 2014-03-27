@@ -1,1 +1,1 @@
-facultyCredits = 20
+worklist = [];
