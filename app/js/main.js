@@ -5,3 +5,4 @@ $(document).ready(function() {
 	$("#informationpanel").load("app/snippets/ipMain.html");
 	$("#controlpanel").load("app/snippets/cpMain.html");
 });
+
