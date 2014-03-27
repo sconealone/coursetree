@@ -9,3 +9,14 @@ var showBiol1XX = function() {
 var showBIOL121 = function() {
   $("#informationpanel").load("app/snippets/ipBIOL121.html");
 };
+
+// A list of courses that fulfill the communications requirement
+var showCommunications = function() {
+  $("#informationpanel").load("app/snippets/ipCommunications.html");
+};
+
+var showGrades = function(course) {
+	$("#informationpanel").load("app/snippets/ipGrades.html", function() {
+		$("#grades").html(course);
+	});
+}
