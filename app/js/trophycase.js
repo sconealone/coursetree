@@ -1,8 +1,7 @@
-var foo = function() {
-	$("#trophycase").load("app/snippets/tcFacultyReqs.html");
+var showMain = function() {
+	$("#trophycase").load("app/snippets/tcMain.html");
 }
-var bar = function() {
-	facultyCredits += 3
-	$("#facultyCreditsTotal").text("" + facultyCredits)
+var showLowerScience = function() {
+	$("#trophycase").load("app/snippets/tcLowerScience.html")
 }
 

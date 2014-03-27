@@ -1,12 +1,13 @@
-<h2>Requirements</h2>
+<h4>Requirements</h4>
 <div class="container">
   <div class="row">
     <div class="col-md-2">
       <div>
-        <button class="btn btn-primary btn-block">Lower level science</button>
+        <button data-toggle="tooltip" title="Contains courses required for promotion" class="btn btn-primary btn-block tt" onclick="showLowerScience()">Lower level science*</button>
       </div>
       <div class="progress">
-        <div class="progress-bar progress-bar-info" style="width:90%">27/30</div>
+        <div class="progress-bar progress-bar-info" style="width:83%">15/18</div>
+		<div class="progress-bar progress-bar-warning hidden" style="width:17%"></div>
       </div>
     </div>
   </div>
@@ -15,10 +16,11 @@
   <div class="row">
     <div class="col-md-2">
       <div>
-        <button class="btn btn-primary btn-block">Arts</button>
+        <button class="btn btn-primary btn-block tt" data-toggle="tooltip" title="Contains courses required for promotion">Arts*</button>
       </div>
       <div class="progress">
-        <div class="progress-bar progress-bar-info" style="width:80%">15/18</div>
+        <div class="progress-bar progress-bar-info" style="width:50%">9 (+3)/18</div>
+		<div class="progress-bar progress-bar-warning" id="arts-progress-bar" style="width:17%"></div>
       </div>
     </div>
   </div>
@@ -29,7 +31,20 @@
         <button class="btn btn-primary btn-block">Breadth</button>
       </div>
       <div class="progress">
-        <div class="progress-bar progress-bar-info" style="width:40%">4/9</div>
+        <div class="progress-bar progress-bar-info" style="width:0%"></div>
+		0/9
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2">
+      <div>
+        <button class="btn btn-primary btn-block">Upper level science</button>
+      </div>
+      <div class="progress">
+        <div class="progress-bar progress-bar-info" style="width:0%"></div>
+		0/48
       </div>
     </div>
   </div>
@@ -41,7 +56,8 @@
         <button class="btn btn-primary btn-block">CPSC 1XX</button>
       </div>
       <div class="progress">
-        <div class="progress-bar progress-bar-info" style="width:100%">30/30</div>
+        <div class="progress-bar progress-bar-info" style="width:80%">24/30</div>
+		<div class="progress-bar progress-bar-warning" id="cpsc-100-progress-bar" style="width:0%"></div>
       </div>
     </div>
   </div>
@@ -53,7 +69,8 @@
         <button class="btn btn-primary btn-block">CPSC 2XX</button>
       </div>
       <div class="progress">
-        <div class="progress-bar progress-bar-info" style="width:80%">28/30</div>
+        <div class="progress-bar progress-bar-info" style="width:0%">21/30</div>
+		<div class="progress-bar progress-bar-warning" id="cpsc-200-progress-bar" style="width:70%">0 (+21)/30</div>
       </div>
     </div>
   </div>
