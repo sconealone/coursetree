@@ -1,5 +1,12 @@
 <h3>Required Courses</h3>
 <style type="text/css">
+.coursetree {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+}
+
 .invisibleDIV {
   height: 40px;
   width: 140px;
@@ -31,8 +38,12 @@
   left: 530px;
 }
 </style>
-<a href="#" onclick="showBiol1XX()"><div class="invisibleDIV" id="BIOL1XX"></div></a>
-<a href="#" onclick="showCommunications()"><div class="invisibleDIV" id="ENGL1XX"></div></a>
-<a href="#" onclick="showCPSC221()"><div class="invisibleDIV" id="CPSC213"></div></a>
-<a href="#" onclick="showCPSC221()"><div class="invisibleDIV" id="CPSC221"></div></a>
-<img src="app/img/coursetree.png" border=0 height=400></img>
+
+<div>
+  <img src="app/img/coursetree.png" border=0 height=400></img>
+
+  <a href="#" onclick="showBiol1XX()"><div class="invisibleDIV" id="BIOL1XX"></div></a>
+  <a href="#" onclick="showCommunications()"><div class="invisibleDIV" id="ENGL1XX"></div></a>
+  <a href="#" onclick="showCourse('CPSC 213', 'Introduction to Computer Systems')"><div class="invisibleDIV" id="CPSC213"></div></a>
+  <a href="#" onclick="showCPSC221()"><div class="invisibleDIV" id="CPSC221"></div></a>
+</div>
