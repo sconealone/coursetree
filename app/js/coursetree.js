@@ -20,3 +20,11 @@ var showGrades = function(course) {
 		$("#grades").html(course);
 	});
 }
+
+var showCoursetree = function() {
+	$("#coursetree").load("app/snippets/ctMain.html");
+}
+
+var showWorklist = function() {
+	$("#coursetree").load("app/snippets/ctWorklist.html");
+}
