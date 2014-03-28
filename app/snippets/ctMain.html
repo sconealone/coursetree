@@ -9,41 +9,41 @@
 
 .invisibleDIV {
   height: 40px;
-  width: 140px;
+  width: 145px;
   border: 5px solid red;
+  
   z-index: 1;
 }
 
 #BIOL1XX {
-  position: absolute;
-  top: 325px;
-  left: 23px;
+  position: relative;
+  top: -130px;
+  left: 21px;
 }
 
 #ENGL1XX {
-  position: absolute;
-  top: 405px;
-  left: 23px;
+  position: relative;
+  top: -90px;
+  left: 21px;
 }
 
 #CPSC213 {
-  position: absolute;
-  top: 135px;
-  left: 360px;
+  position: relative;
+  top: -400px;
+  left: 358px;
 }
 
 #CPSC221 {
-  position: absolute;
-  top: 105px;
-  left: 530px;
+  position: relative;
+  top: -470px;
+  left: 528px;
 }
 </style>
 
-<div>
-  <img src="app/img/coursetree.png" border=0 height=400></img>
+<img src="app/img/coursetree.png" border=0 height=400></img>
 
-  <a href="#" onclick="showBiol1XX()"><div class="invisibleDIV" id="BIOL1XX"></div></a>
-  <a href="#" onclick="showCommunications()"><div class="invisibleDIV" id="ENGL1XX"></div></a>
-  <a href="#" onclick="showCourse('CPSC 213', 'Introduction to Computer Systems')"><div class="invisibleDIV" id="CPSC213"></div></a>
-  <a href="#" onclick="showCPSC221()"><div class="invisibleDIV" id="CPSC221"></div></a>
-</div>
+<a href="#informationpanel" onclick="showBiol1XX()"><div class="invisibleDIV" id="BIOL1XX"></div></a>
+<a href="#informationpanel" onclick="showCommunications()"><div class="invisibleDIV" id="ENGL1XX"></div></a>
+<a href="#informationpanel" onclick="showCourse('CPSC 213', 'Introduction to Computer Systems')"><div class="invisibleDIV" id="CPSC213"></div></a>
+<a href="#informationpanel" onclick="showCPSC221()"><div class="invisibleDIV" id="CPSC221"></div></a>
+
