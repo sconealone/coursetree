@@ -53,7 +53,29 @@ var addCourse = function() {
 		$('#addCourseButton').removeClass('btn-primary');
 		$('#addCourseButton').addClass('btn-success');
 		$('#addCourseButton').html('Added');
+
 		var course = $('#sectionCourse').text();
+    
+    switch (course) {
+      case "BIOL 121":
+        $('#BIOL1XX').css('background-image', 'url("app/img/BIOL121.png")');
+        $('#BIOL1XX').css('background-size', 'contain');
+        break;
+      case "ENGL 120":
+        $('#ENGL1XX').css('background-image', 'url("app/img/ENGL120.png")');
+        $('#ENGL1XX').css('background-size', 'contain');
+        break;
+      case "CPSC 213":
+        $('#CPSC213').css('background-image', 'url("app/img/CPSC213.png")');
+        $('#CPSC213').css('background-size', 'contain');
+        break;
+      case "CPSC 221":
+        $('#CPSC221').css('background-image', 'url("app/img/CPSC221.png")');
+        $('#CPSC221').css('background-size', 'contain');
+        break;
+      
+    }
+    
 		worklist.push(course);
 	}
 }
