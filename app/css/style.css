@@ -7,3 +7,41 @@ body {
 #top {
   background: #fff;
 }
+
+.coursetree {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+}
+
+.invisibleDIV {
+  height: 40px;
+  width: 151px;
+  <!--border: 5px solid red;-->
+  z-index: 1;
+}
+
+#BIOL1XX {
+  position: relative;
+  top: -130px;
+  left: 21px;
+}
+
+#ENGL1XX {
+  position: relative;
+  top: -90px;
+  left: 21px;
+}
+
+#CPSC213 {
+  position: relative;
+  top: -400px;
+  left: 358px;
+}
+
+#CPSC221 {
+  position: relative;
+  top: -470px;
+  left: 528px;
+}
