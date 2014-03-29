@@ -1,33 +1,37 @@
 <h3>Required Courses</h3>
 <div class="row" style="margin-left: 0px;">
-  Filter by:
-  <div class="btn-group">
-    <button type="button" class="btn btn-primary btn-xs dropdown-toggle" data-toggle="dropdown">
-      Required courses
-      <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu">
-      <li><a href="#">Required Courses</a>
-      <li><a href="#">Data Analysis</a>
-      <li><a href="#">Databases</a>
-      <li><a href="#">Graphics/Animation</a>
-      <li><a href="#">HCI</a></li>
-      <li><a href="#">Intelligent Systems</a>
-      <li><a href="#">Scientific Computing</a>
-      <li><a href="#">Software Practices</a>
-      <li><a href="#">Systems</a>
-      <li><a href="#">Theory</a>
-      <li><a href="#">All CPSC Courses</a></li>
-    </ul>
+  <div class="col-md-4">
+    Filter by:
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary btn-xs dropdown-toggle" data-toggle="dropdown">
+        Required courses
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a href="#">Required Courses</a>
+        <li><a href="#">Data Analysis</a>
+        <li><a href="#">Databases</a>
+        <li><a href="#">Graphics/Animation</a>
+        <li><a href="#">HCI</a></li>
+        <li><a href="#">Intelligent Systems</a>
+        <li><a href="#">Scientific Computing</a>
+        <li><a href="#">Software Practices</a>
+        <li><a href="#">Systems</a>
+        <li><a href="#">Theory</a>
+        <li><a href="#">All CPSC Courses</a></li>
+      </ul>
+    </div>
   </div>
-  Show:
-  <div class="btn-group" data-toggle="buttons">
-    <label class="btn btn-primary btn-xs active" onclick="showCoursetree()">
-      <input type="radio"><span class="glyphicon glyphicon-tree-deciduous"></span> Courses
-    </label>
-    <label class="btn btn-primary btn-xs" onclick="showWorklist()">
-      <input type="radio"> Worklist <span class="glyphicon glyphicon-calendar"></span>
-    </label>
+  <div class="col-md-8">
+    Show:
+    <div class="btn-group" data-toggle="buttons">
+      <label class="btn btn-primary btn-xs active" onclick="showCoursetree()">
+        <input type="radio"><span class="glyphicon glyphicon-tree-deciduous"></span> Courses
+      </label>
+      <label class="btn btn-primary btn-xs" onclick="showWorklist()">
+        <input type="radio"> Worklist <span class="glyphicon glyphicon-calendar"></span>
+      </label>
+    </div>
   </div>
 </div>
 <img src="app/img/coursetree.png" border=0 height=400></img>
