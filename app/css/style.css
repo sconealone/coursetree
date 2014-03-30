@@ -8,6 +8,11 @@ body {
   background: #fff;
 }
 
+#footer {
+  background: #fff;
+  padding: 20 0 0 0;
+}
+
 .coursetree {
   position: absolute;
   top: 0px;
@@ -44,4 +49,66 @@ body {
   position: relative;
   top: -470px;
   left: 528px;
+}
+
+#trophycaserow {
+  margin-bottom: 5px;
+}
+
+/* Trophy Case Button Colours */
+
+.btn-taken {
+  font-family: monospace;
+  font-size: 16px;
+  line-height: 1;
+  color: #fff;
+  background-color: #6184a1;
+  border-color: #6184a1;
+}
+.btn-taken:hover,
+.btn-taken:focus,
+.btn-taken:active,
+.btn-taken.active,
+.open .dropdown-toggle.btn-taken {
+  color: #fff;
+  background-color: #819db4;
+  border-color: #819db4;
+}
+.btn-taken:active,
+.btn-taken.active,
+.open .dropdown-toggle.btn-taken {
+  background-image: none;
+}
+
+.btn-taken .badge {
+  color: #6184a1;
+  background-color: #fff;
+}
+
+.btn-unlocked {
+  font-family: monospace;
+  font-size: 16px;
+  line-height: 1;
+  color: #fff;
+  background-color: #368e5a;
+  border-color: #368e5a;
+}
+.btn-unlocked:hover,
+.btn-unlocked:focus,
+.btn-unlocked:active,
+.btn-unlocked.active,
+.open .dropdown-toggle.btn-unlocked {
+  color: #fff;
+  background-color: #44b371;
+  border-color: #44b371;
+}
+.btn-unlocked:active,
+.btn-unlocked.active,
+.open .dropdown-toggle.btn-unlocked {
+  background-image: none;
+}
+
+.btn-unlocked .badge {
+  color: #368e5a;
+  background-color: #fff;
 }
