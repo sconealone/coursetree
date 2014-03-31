@@ -5,23 +5,24 @@
 <h3>Requirements</h3>
 <div class="container-fluid">
 
+<h4>Program Requirements</h4>
   <div class="row">
       <div>
-        <button class="btn btn-primary btn-block" data-toggle="tooltip" title="CPSC Program 1st Year Requirement" onclick="showCPSC1XX()">CPSC 1st Year</button>
+        <button class="btn btn-primary btn-block" onclick="showCPSC1XX()">CPSC 1st Year</button>
       </div>
-      <div class="progress">
-        <div class="progress-bar progress-bar-info" style="width:80%">24 / 30 credits</div>
-		<div class="progress-bar progress-bar-warning" id="cpsc-100-progress-bar" style="width:0%"></div>
+      <div class="progress" data-toggle="tooltip" title="24 / 30 credits completed">
+        <div class="progress-bar progress-bar-tc" style="width:80%"><!--24 / 30 credits--></div>
+        <div class="progress-bar progress-bar-warning" id="cpsc-100-progress-bar" style="width:0%"></div>
       </div>
   </div>
 
   <div class="row">
       <div>
-        <button class="btn btn-primary btn-block" data-toggle="tooltip" title="CPSC Program 2nd Year Requirement" onclick="showCPSC2XX()">CPSC 2nd Year</button>
+        <button class="btn btn-primary btn-block" onclick="showCPSC2XX()">CPSC 2nd Year</button>
       </div>
-      <div class="progress">
-        <div class="progress-bar progress-bar-info" style="width:0%">21 / 30 credits</div>
-		<div class="progress-bar progress-bar-warning" id="cpsc-200-progress-bar" style="width:70%">0(+21)/30</div>
+      <div class="progress" data-toggle="tooltip" title="0 / 30 credits completed (21 credits in worklist)">
+        <div class="progress-bar progress-bar-tc" style="width:0%">21 / 30 credits</div>
+		<div class="progress-bar progress-bar-tc_saved" id="cpsc-200-progress-bar" style="width:70%"><!--0 (+21) / 30 credits--></div>
       </div>
   </div>
 
@@ -29,69 +30,70 @@
       <div>
         <button class="btn btn-primary btn-block" data-toggle="tooltip" title="This has not been implemented!">CPSC 3rd & 4th Year</button>
       </div>
-      <div class="progress">
-        <div class="progress-bar progress-bar-info" style="width:0%"></div>
-        0 / 60 credits
+      <div class="progress" data-toggle="tooltip" title="0 / 60 credits completed">
+        <div class="progress-bar progress-bar-tc" style="width:0%"></div>
+        <!--0 / 60 credits-->
       </div>
   </div>
-  
+
+<h4>Faculty Requirements</h4>
   <div class="row">
       <div>
-        <button class="btn btn-primary btn-block" data-toggle="tooltip" title="Science Faculty Lower-level Science Requirement" onclick="showLowerScience()">Lower-level Science</button>
+        <button class="btn btn-primary btn-block" onclick="showLowerScience()">Lower-level Science</button>
       </div>
-      <div class="progress">
-        <div class="progress-bar progress-bar-info" style="width:83%">15 / 18 credits</div>
-		<div class="progress-bar progress-bar-warning hidden" style="width:17%"></div>
+      <div class="progress" data-toggle="tooltip" title="15 / 18 credits completed">
+        <div class="progress-bar progress-bar-tc" style="width:83%"><!--15 / 18 credits--></div>
+		<div class="progress-bar progress-bar-tc_saved hidden" style="width:17%"></div>
       </div>
   </div>
 
   <div class="row">
       <div>
-        <button class="btn btn-primary btn-block"data-toggle="tooltip" title="This has not been implemented!">Upper-level Science</button>
+        <button class="btn btn-primary btn-block" data-toggle="tooltip" title="This has not been implemented!">Upper-level Science</button>
       </div>
-      <div class="progress">
-        <div class="progress-bar progress-bar-info" style="width:0%"></div>
-      0 / 48 credits
+      <div class="progress" data-toggle="tooltip" title="0 / 48 credits completed">
+        <div class="progress-bar progress-bar-tc" style="width:0%"></div>
+      <!--0 / 48 credits-->
       </div>
   </div>
 
   <div class="row">
       <div>
-        <button class="btn btn-primary btn-block" data-toggle="tooltip" title="Science Faculty Arts Requirement" onclick="showArts()">Arts</button>
+        <button class="btn btn-primary btn-block" onclick="showArts()">Arts</button>
       </div>
-      <div class="progress">
-        <div class="progress-bar progress-bar-info" style="width:50%">9(+3)/18</div>
-		<div class="progress-bar progress-bar-warning" id="arts-progress-bar" style="width:17%"></div>
+      <div class="progress" data-toggle="tooltip" title="9 / 18 credits completed (3 credits in worklist)">
+        <div class="progress-bar progress-bar-tc" style="width:50%"><!--9 (+3) / 18 credits--></div>
+		<div class="progress-bar progress-bar-tc_saved" id="arts-progress-bar" style="width:17%"></div>
       </div>
   </div>
   
   <div class="row">
       <div>
-        <button class="btn btn-primary btn-block"data-toggle="tooltip" title="This has not been implemented!">Breadth</button>
+        <button class="btn btn-primary btn-block" data-toggle="tooltip" title="This has not been implemented!">Breadth</button>
       </div>
-      <div class="progress">
-        <div class="progress-bar progress-bar-info" style="width:0%"></div>
-		0 / 9 credits
+      <div class="progress" data-toggle="tooltip" title="0 / 9 credits completed">
+        <div class="progress-bar progress-bar-tc" style="width:0%"></div>
+		<!--0 / 9 credits-->
       </div>
   </div>
 
 </div>
 
 <h3>Progress Overview</h3>
-<p>Credits needed for promotion: </p>
-<div class="progress">
-	<div class="progress-bar progress-bar-info" style="width:44%">21(+13)/48</div>
-	<div class="progress-bar progress-bar-warning" style="width:27%"></div>
+<p>Promotion to 3rd year: </p>
+<div class="progress" data-toggle="tooltip" title="21 / 48 credits completed (13 credits in worklist)">
+	<div class="progress-bar progress-bar-tc" style="width:44%"><!--21 (+13) / 48 credits--></div>
+	<div class="progress-bar progress-bar-tc_saved" style="width:27%"></div>
 </div>
 
-<p>Credits needed for graduation:</p>
-<div class="progress">
-	<div class="progress-bar progress-bar-info" style="width:27%">32(+16)/120</div>
-	<div class="progress-bar progress-bar-warning" style="width:13%"></div>
+<p>Graduation:</p>
+<div class="progress" data-toggle="tooltip" title="32 / 120 credits completed (16 credits in worklist)">
+	<div class="progress-bar progress-bar-tc" style="width:27%"><!--32 (+16) / 120 credits--></div>
+	<div class="progress-bar progress-bar-tc_saved" style="width:13%"></div>
 </div>
 
 <h3>Legend</h3>
-<div><span class="glyphicon glyphicon-check"></span> Taken</div>
-<div><span class="glyphicon glyphicon-unchecked"></span> Prereqs met (not taken)</div>
+<div><span class="glyphicon glyphicon-ok"></span> Taken</div>
+<div><span class="glyphicon"><img src="app/img/glyphicons_204_unlock_b.png" border=0></img></span> Prereqs met (not taken)</div>
 <div><span class="glyphicon glyphicon-lock"></span> Prereqs not met</div>
 <div><span class="glyphicon glyphicon-floppy-disk"></span> Saved to worklist</div>

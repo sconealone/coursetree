@@ -9,141 +9,62 @@
 	</button>
 </div>
 <h4>CPSC 1st year</h4>
-<span>24/30</span>
-<div class="container">
+<div class="container-fluid">
 
-  <div class="row">
-      <div>
-	  	<span>
-			<button class="btn btn-primary pull-left" onclick="showGrades('ENGL 112')">
-				<span class="glyphicon glyphicon-ok"></span>
-				<span class="badge pull-right">3</span>
-			</button>
-			<table border=0>
-			<tr><td>ENGL 112</td></tr>
-			<tr><td><small>Communication</small></td></tr>
-			</table>
-		</span>
-      </div>
+  <div class="row" id="trophycaserow">
+    <button class="btn btn-taken" data-toggle="tooltip" title="Communications Requirement" onclick="showGrades('ENGL 112')">
+      <span class="glyphicon glyphicon-ok"></span> ENGL 112 <span class="badge">3 credits</span>
+    </button>
+  </div>
+  
+  <div class="row" id="trophycaserow">
+    <button class="btn btn-unlocked" data-toggle="tooltip" title="Communications Requirement" onclick="showCommunications()">
+      <span class="glyphicon"><img src="app/img/glyphicons_204_unlock.png" border=0></img></span> ENGL 1XX <span class="badge">3 credits</span>
+    </button>
   </div>
 
-  <div class="row">
-      <div>
-	  	<span>
-			<button class="btn btn-success pull-left" data-toggle="tooltip" title="Required for promotion" onclick="showCommunications()">
-				<span class="glyphicon glyphicon-unchecked"></span>
-				<span class="badge pull-right">3</span>
-			</button>
-			<table border=0>
-			<tr><td><small>Communication</small></td></tr>
-			</table>
-		</span>
-      </div>
+  <div class="row" id="trophycaserow">
+    <button class="btn btn-taken" onclick="showGrades('MATH 100')">
+      <span class="glyphicon glyphicon-ok"></span> MATH 100 <span class="badge">3 credits</span>
+    </button>
+  </div>
+  
+  <div class="row" id="trophycaserow">
+    <button class="btn btn-taken" onclick="showGrades('MATH 101')">  
+      <span class="glyphicon glyphicon-ok"></span> MATH 101 <span class="badge">3 credits</span>
+    </button>
+  </div>
+  
+  <div class="row" id="trophycaserow">
+    <button class="btn btn-taken" onclick="showGrades('CPSC 110')">
+      <span class="glyphicon glyphicon-ok"></span> CPSC 110 <span class="badge">4 credits</span>
+    </button>
   </div>
 
-
-  <div class="row">
-      <div>
-	  	<span>
-			<button class="btn btn-primary pull-left" onclick="showGrades('MATH 100')">
-				<span class="glyphicon glyphicon-ok"></span>
-				<span class="badge pull-right">3</span>
-			</button>
-			<table border=0>
-			<tr><td>MATH 100</td></tr>
-			<tr><td><small>Required course</small></td></tr>
-			</table>
-		</span>
-      </div>
-  </div>
-  <div class="row">
-      <div>
-	  	<span>
-			<button class="btn btn-primary pull-left" onclick="showGrades('MATH 101')">
-				<span class="glyphicon glyphicon-ok"></span>
-				<span class="badge pull-right">3</span>
-			</button>
-			<table border=0>
-			<tr><td>MATH 101</td></tr>
-			<tr><td><small>Required course</small></td></tr>
-			</table>
-		</span>
-      </div>
-  </div>
-  <div class="row">
-      <div>
-	  	<span>
-			<button class="btn btn-primary pull-left" onclick="showGrades('CPSC 110')">
-				<span class="glyphicon glyphicon-ok"></span>
-				<span class="badge pull-right">4</span>
-			</button>
-			<table border=0>
-			<tr><td>CPSC 110</td></tr>
-			<tr><td><small>Required course</small></td></tr>
-			</table>
-		</span>
-      </div>
+  <div class="row" id="trophycaserow">
+    <button class="btn btn-taken" onclick="showGrades('CPSC 121')">
+      <span class="glyphicon glyphicon-ok"></span> CPSC 121 <span class="badge">4 credits</span>
+    </button>
   </div>
 
-  <div class="row">
-      <div>
-	  	<span>
-			<button class="btn btn-primary pull-left" onclick="showGrades('CPSC 121')">
-				<span class="glyphicon glyphicon-ok"></span>
-				<span class="badge pull-right">4</span>
-			</button>
-			<table border=0>
-			<tr><td>CPSC 121</td></tr>
-			<tr><td><small>Required course</small></td></tr>
-			</table>
-		</span>
-      </div>
+  <div class="row" id="trophycaserow">
+    <button class="btn btn-taken" onclick="showGrades('CHEM 121')">
+      <span class="glyphicon glyphicon-ok"></span> CHEM 121 <span class="badge">3 credits</span>
+    </button>
   </div>
 
-  <div class="row">
-      <div>
-	  	<span>
-			<button class="btn btn-primary pull-left" onclick="showGrades('CHEM 121')">
-				<span class="glyphicon glyphicon-ok"></span>
-				<span class="badge pull-right">3</span>
-			</button>
-			<table border=0>
-			<tr><td>CHEM 121</td></tr>
-			<tr><td><small>Physical</small></td></tr>
+  <div class="row" id="trophycaserow">
+    <button class="btn btn-taken" onclick="showGrades('PHYS 101')">
+      <span class="glyphicon glyphicon-ok"></span> PHYS 101 <span class="badge">3 credits</span>
+    </button>
 			</table>
-		</span>
-      </div>
   </div>
 
-  <div class="row">
-    <div>
-	  <span>
-			<button class="btn btn-primary pull-left" onclick="showGrades('PHYS 101')">
-				<span class="glyphicon glyphicon-ok"></span>
-				<span class="badge pull-right">3</span>
-			</button>
-			<table border=0>
-			<tr><td>PHYS 101</td></tr>
-			<tr><td><small>Physical</small></td></tr>
-			</table>
-		</span>
-    </div>
+  <div class="row" id="trophycaserow">
+    <button class="btn btn-unlocked" data-toggle="tooltip" title="Life and Earth Requirement" onclick="showBiol1XX()">
+      <span class="glyphicon"><img src="app/img/glyphicons_204_unlock.png" border=0></img></span> BIOL 1XX  <span class="badge">3 credits</span>
+    </button>
   </div>
-
-
-  <div class="row">
-    <div>
-	  	<span>
-			<button class="btn btn-success pull-left" data-toggle="tooltip" title="Required for promotion" onclick="showBiol1XX()">
-				<span class="glyphicon glyphicon-unchecked"></span>
-				<span class="badge pull-right">3</span>
-			</button>
-			<table border=0>
-			<tr><td>BIOL 1XX</td></tr>
-			<tr><td><small>Life and earth</small></td></tr>
-			</table>
-      </span>
-    </div>
-  </div>
-
+  
+  Total: 24 / 30 credits completed
 </div>

@@ -8,97 +8,47 @@
 		<span class="glyphicon glyphicon-chevron-left"></span> Back
 	</button>
 </div>
-<h4>Arts</h4>
-<span>9(+3)/18</span>
-<div class="container">
+<h4>Bachelor of Science</h4>
+<h4>Arts Requirements</h4>
 
-  <div class="row">
-      <div>
-	  	<span>
-			<button class="btn btn-primary pull-left" onclick="showGrades('ENGL 112')">
-				<span class="glyphicon glyphicon-ok"></span>
-				<span class="badge pull-right">3</span>
-			</button>
-			<table border=0>
-			<tr><td>ENGL 112</td></tr>
-			<tr><td><small>Communication</small></td></tr>
-			</table>
-		</span>
-    </div>
+<div class="container-fluid">
+
+  <div class="row" id="trophycaserow">
+    <button class="btn btn-taken" data-toggle="tooltip" title="Communication Requirement" onclick="showGrades('ENGL 112')">
+      <span class="glyphicon glyphicon-ok"></span> ENGL 112 <span class="badge">3 credits</span>
+    </button>
+  </div>
+  
+  <div class="row" id="trophycaserow">
+    <button class="btn btn-unlocked" data-toggle="tooltip" title="Communications Requirement" onclick="showCommunications()">
+      <span class="glyphicon"><img src="app/img/glyphicons_204_unlock.png" border=0></img></span> ENGL 1XX <span class="badge">3 credits</span>
+    </button>
   </div>
 
-  <div class="row">
-    <div>
-	  	<span>
-			<button class="btn btn-success pull-left" onclick="showCommunications()" data-toggle="tooltip" title="Required for promotion">
-				<span class="glyphicon glyphicon-unchecked"></span>
-				<span class="badge pull-right">3</span>
-			</button>
-			<table border=0>
-			<tr><td><small>Communication</small></td></tr>
-			</table>
-		</span>
-    </div>
+  <div class="row" id="trophycaserow">
+    <button class="btn btn-taken" data-toggle="tooltip" title="Elective" onclick="showGrades('ECON 101')">
+      <span class="glyphicon glyphicon-ok"></span> ECON 101 <span class="badge">3 credits</span>
+    </button>
+  </div>  
+  
+  <div class="row" id="trophycaserow">
+    <button class="btn btn-taken" data-toggle="tooltip" title="Elective" onclick="showGrades('ANTH 101')">
+      <span class="glyphicon glyphicon-ok"></span> ANTH 101 <span class="badge">3 credits</span>
+    </button>
+  </div>   
+
+  <div class="row" id="trophycaserow">
+    <button class="btn btn-unlocked" data-toggle="tooltip" title="Added to worklist">
+      <span class="glyphicon glyphicon-floppy-disk"></span> PHIL 120 <span class="badge">3 credits</span>
+    </button>
+  </div>
+  
+  <!-- TODO -->
+  <div class="row" id="trophycaserow">
+    <button class="btn btn-unlocked" data-toggle="tooltip" title="Elective">
+      <span class="glyphicon"><img src="app/img/glyphicons_204_unlock.png" border=0></img></span> ARTS <span class="badge">3 credits</span>
+    </button>
   </div>
 
-  <div class="row">
-    <div>
-	  	<span>
-			<button class="btn btn-primary pull-left" onclick="showGrades('ECON 101')">
-				<span class="glyphicon glyphicon-ok"></span>
-				<span class="badge pull-right">3</span>
-			</button>
-			<table border=0>
-			<tr><td>ECON 101</td></tr>
-			<tr><td><small>Elective</small></td></tr>
-			</table>
-		</span>
-    </div>
-  </div>
-
-
-  <div class="row">
-    <div>
-	  	<span>
-			<button class="btn btn-primary pull-left" onclick="showGrades('ANTH 101')">
-				<span class="glyphicon glyphicon-ok"></span>
-				<span class="badge pull-right">3</span>
-			</button>
-			<table border=0>
-			<tr><td>ANTH 101</td></tr>
-			<tr><td><small>Elective</small></td></tr>
-			</table>
-		</span>
-    </div>
-  </div>
-
-  <div class="row">
-    <div>
-	  	<span>
-			<button class="btn btn-primary pull-left">
-				<span class="glyphicon glyphicon-floppy-disk"></span>
-				<span class="badge pull-right">3</span>
-			</button>
-			<table border=0>
-			<tr><td>PHIL 102</td></tr>
-			<tr><td><small>Elective</small></td></tr>
-			</table>
-		</span>
-    </div>
-  </div>
-
-  <div class="row">
-    <div>
-	  	<span>
-			<button class="btn btn-success pull-left">
-				<span class="glyphicon glyphicon-unchecked"></span>
-				<span class="badge pull-right">3</span>
-			</button>
-			<table border=0>
-			<tr><td><small>Elective</small></td></tr>
-			</table>
-		</span>
-    </div>
-  </div>
-
+  Total: 9 / 18 credits completed
 </div>
