@@ -7,7 +7,7 @@
   <div class="row">
   Promotion to 3rd year:
     <div class="progress" data-toggle="tooltip" title="21 / 48 credits completed (13 credits in worklist)">
-      <div class="progress-bar progress-bar-tc" style="width:44%"><!--21 (+13) / 48 credits--></div>
+      <div class="progress-bar progress-bar-tc" style="width:44%"></div>
       <div class="progress-bar progress-bar-tc_saved" style="width:27%"></div>
     </div>
   </div>
@@ -15,7 +15,7 @@
   <div class="row">
     Graduation:
     <div class="progress" data-toggle="tooltip" title="32 / 120 credits completed (16 credits in worklist)">
-      <div class="progress-bar progress-bar-tc" style="width:27%"><!--32 (+16) / 120 credits--></div>
+      <div class="progress-bar progress-bar-tc" style="width:27%"></div>
       <div class="progress-bar progress-bar-tc_saved" style="width:13%"></div>
     </div>
   </div>
@@ -29,9 +29,9 @@
       <div>
         <button class="btn btn-primary btn-block" onclick="showCPSC1XX()">CPSC 1st Year</button>
       </div>
-      <div class="progress" data-toggle="tooltip" title="24 / 30 credits completed">
-        <div class="progress-bar progress-bar-tc" style="width:80%"><!--24 / 30 credits--></div>
-        <div class="progress-bar progress-bar-warning" id="cpsc-100-progress-bar" style="width:0%"></div>
+      <div class="progress" id="progress-bar" data-toggle="tooltip" title="24 / 30 credits completed">
+        <div class="progress-bar progress-bar-tc" style="width:80%"></div>
+        <div class="progress-bar progress-bar-tc_saved" id="cpsc-100-progress-bar" style="width:0%"></div>
       </div>
   </div>
 
@@ -40,8 +40,8 @@
         <button class="btn btn-primary btn-block" onclick="showCPSC2XX()">CPSC 2nd Year</button>
       </div>
       <div class="progress" data-toggle="tooltip" title="0 / 30 credits completed (21 credits in worklist)">
-        <div class="progress-bar progress-bar-tc" style="width:0%">21 / 30 credits</div>
-		<div class="progress-bar progress-bar-tc_saved" id="cpsc-200-progress-bar" style="width:70%"><!--0 (+21) / 30 credits--></div>
+        <div class="progress-bar progress-bar-tc" style="width:0%"></div>
+        <div class="progress-bar progress-bar-tc_saved" id="cpsc-200-progress-bar" style="width:70%"></div>
       </div>
   </div>
 
@@ -61,8 +61,8 @@
         <button class="btn btn-primary btn-block" onclick="showLowerScience()">Lower-level Science</button>
       </div>
       <div class="progress" data-toggle="tooltip" title="15 / 18 credits completed">
-        <div class="progress-bar progress-bar-tc" style="width:83%"><!--15 / 18 credits--></div>
-		<div class="progress-bar progress-bar-tc_saved hidden" style="width:17%"></div>
+        <div class="progress-bar progress-bar-tc" style="width:83%"></div>
+        <div class="progress-bar progress-bar-tc_saved" id="lower-level-progress-bar"></div>
       </div>
   </div>
 
@@ -81,7 +81,7 @@
         <button class="btn btn-primary btn-block" onclick="showArts()">Arts</button>
       </div>
       <div class="progress" data-toggle="tooltip" title="9 / 18 credits completed (3 credits in worklist)">
-        <div class="progress-bar progress-bar-tc" style="width:50%"><!--9 (+3) / 18 credits--></div>
+        <div class="progress-bar progress-bar-tc" style="width:67%"></div>
 		<div class="progress-bar progress-bar-tc_saved" id="arts-progress-bar" style="width:17%"></div>
       </div>
   </div>

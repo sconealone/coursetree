@@ -12,29 +12,163 @@ Design and analysis of basic algorithms and data structures; algorithm analysis 
 </p>
 
   <ul class="nav nav-tabs">
-    <li class="active"><a href="#details" data-toggle="tab">Course Details</a></li>
-    <li><a href="#section" data-toggle="tab">Section Listing</a></li>
+    <li class="active"><a href="#section" data-toggle="tab">Section Listing</a></li>
+    <li><a href="#details" data-toggle="tab">Course Details</a></li>
   </ul>
-
+  
+  <!-- Section Listing Tab Pane -->
   <div class="tab-content">
-    <div class="tab-pane active" id="details">
-      <br><p>
-      This course is eligible for Credit/D/Fail grading. To determine whether you can take this course for Credit/D/Fail grading, visit the Credit/D/Fail website. You must register in the course before you can select the Credit/D/Fail grading option.
-      <br><br>
-      Credits: 4
-      </p>
+    <div class="tab-pane active" id="section">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Status</th>
 
-      <p>
-      Location: Vancouver
+          <th>Section</th>
+
+          <th>Activity</th>
+
+          <th>Term</th>
+
+          <th>Days</th>
+
+          <th>Start Time</th>
+
+          <th>End Time</th>
+
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td></td>
+
+          <td><a href="#"><span id="sectionCourse" class="sectionListing">BIOL 121</span>
+          201</a></td>
+
+          <td>Lecture</td>
+
+          <td>2</td>
+
+          <td>Mon Wed Fri</td>
+
+          <td>14:30</td>
+
+          <td>17:00</td>
+
+          <td><button id="addCourseButton" class="btn btn-primary" onclick=
+          "addCourse()">Add</button></td>
+        </tr>
+
+        <tr>
+          <td></td>
+
+          <td><a href="#"><span class="sectionListing">BIOL 121</span> 2W1</a></td>
+
+          <td>Waiting List</td>
+
+          <td>2</td>
+
+          <td>Mon Wed Fri</td>
+
+          <td>14:30</td>
+
+          <td>17:00</td>
+
+          <td><button class="btn btn-primary disabled">Add</button></td>
+        </tr>
+
+        <tr>
+          <td>&nbsp;</td>
+
+          <td><a href="#"><span class="sectionListing">BIOL 121</span> L0A</a></td>
+
+          <td>Laboratory</td>
+
+          <td>2</td>
+
+          <td>Wed Fri</td>
+
+          <td>10:00</td>
+
+          <td>12:00</td>
+
+          <td><button class="btn btn-primary">Add</button></td>
+        </tr>
+
+        <tr>
+          <td></td>
+
+          <td><a href="#"><span class="sectionListing">BIOL 121</span> L0B</a></td>
+
+          <td>Laboratory</td>
+
+          <td>2</td>
+
+          <td>Wed Fri</td>
+
+          <td>12:00</td>
+
+          <td>14:00</td>
+
+          <td><button class="btn btn-primary">Add</button></td>
+        </tr>
+
+        <tr>
+          <td></td>
+
+          <td><a href="#"><span class="sectionListing">BIOL 121</span> L0C</a></td>
+
+          <td>Laboratory</td>
+
+          <td>2</td>
+
+          <td>Wed Fri</td>
+
+          <td>17:00</td>
+
+          <td>19:00</td>
+
+          <td><button class="btn btn-primary">Add</button></td>
+        </tr>
+
+        <tr>
+          <td>Full</td>
+
+          <td><a href="#"><span class="sectionListing">BIOL 121</span> L0D</a></td>
+
+          <td>Laboratory</td>
+
+          <td>2</td>
+
+          <td>Tue Thu</td>
+
+          <td>10:00</td>
+
+          <td>12:00</td>
+
+          <td><button class="btn btn-primary disabled">Add</button></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    
+    <!-- Course Details Tab Pane -->
+    <div class="tab-pane" id="details">
       <br>
+      <p>
       <b>Term 1</b> (May 12, 2014 to Jun 20, 2014) 
+      <br>
+      <b>Credits:</b> 4
+      <br>
+      <b>Location:</b> Vancouver
+      <br>
       </p>
 
       <p>
       <h4>Cr/D/F Grading Change Dates</h4>
-      </p>
 
-      <p>
       Last day to change between Credit/D/Fail and percentage grading (grading options cannot be changed after this date): <b>May 16, 2014</b>
       </p>
 
@@ -59,142 +193,6 @@ Design and analysis of basic algorithms and data structures; algorithm analysis 
       Information for the books required for this section is not available.
       </p>
   </div>
-  <div class="tab-pane" id="section">
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Status</th>
-
-        <th>Section</th>
-
-        <th>Activity</th>
-
-        <th>Term</th>
-
-        <th>Days</th>
-
-        <th>Start Time</th>
-
-        <th>End Time</th>
-
-        <th>Action</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr>
-        <td></td>
-
-        <td><a href="#"><span id="sectionCourse" class="sectionListing">BIOL 121</span>
-        201</a></td>
-
-        <td>Lecture</td>
-
-        <td>2</td>
-
-        <td>Mon Wed Fri</td>
-
-        <td>14:30</td>
-
-        <td>17:00</td>
-
-        <td><button id="addCourseButton" class="btn btn-primary" onclick=
-        "addCourse()">Add</button></td>
-      </tr>
-
-      <tr>
-        <td></td>
-
-        <td><a href="#"><span class="sectionListing">BIOL 121</span> 2W1</a></td>
-
-        <td>Waiting List</td>
-
-        <td>2</td>
-
-        <td>Mon Wed Fri</td>
-
-        <td>14:30</td>
-
-        <td>17:00</td>
-
-        <td><button class="btn btn-primary disabled">Add</button></td>
-      </tr>
-
-      <tr>
-        <td>&nbsp;</td>
-
-        <td><a href="#"><span class="sectionListing">BIOL 121</span> L0A</a></td>
-
-        <td>Laboratory</td>
-
-        <td>2</td>
-
-        <td>Wed Fri</td>
-
-        <td>10:00</td>
-
-        <td>12:00</td>
-
-        <td><button class="btn btn-primary">Add</button></td>
-      </tr>
-
-      <tr>
-        <td></td>
-
-        <td><a href="#"><span class="sectionListing">BIOL 121</span> L0B</a></td>
-
-        <td>Laboratory</td>
-
-        <td>2</td>
-
-        <td>Wed Fri</td>
-
-        <td>12:00</td>
-
-        <td>14:00</td>
-
-        <td><button class="btn btn-primary">Add</button></td>
-      </tr>
-
-      <tr>
-        <td></td>
-
-        <td><a href="#"><span class="sectionListing">BIOL 121</span> L0C</a></td>
-
-        <td>Laboratory</td>
-
-        <td>2</td>
-
-        <td>Wed Fri</td>
-
-        <td>17:00</td>
-
-        <td>19:00</td>
-
-        <td><button class="btn btn-primary">Add</button></td>
-      </tr>
-
-      <tr>
-        <td>Full</td>
-
-        <td><a href="#"><span class="sectionListing">BIOL 121</span> L0D</a></td>
-
-        <td>Laboratory</td>
-
-        <td>2</td>
-
-        <td>Tue Thu</td>
-
-        <td>10:00</td>
-
-        <td>12:00</td>
-
-        <td><button class="btn btn-primary disabled">Add</button></td>
-      </tr>
-    </tbody>
-  </table>
-  </div>
-
 </div>
 
 <p align=right><a href="#top">top</a></p>

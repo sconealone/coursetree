@@ -55,23 +55,50 @@ var addCourse = function() {
 		$('#addCourseButton').html('Added');
 
 		var course = $('#sectionCourse').text();
+    var barwidth = $('#progress-bar').width();
+    var oldwidth;
+    var newwidth;
     
     switch (course) {
       case "BIOL 121":
         $('#BIOL1XX').css('background-image', 'url("app/img/BIOL121.png")');
         $('#BIOL1XX').css('background-size', 'contain');
+        
+        oldwidth = $('#cpsc-100-progress-bar').width();
+        newwidth = (oldwidth / barwidth * 100) + 10;
+        $('#cpsc-100-progress-bar').width(newwidth + "%");
+        
+        $('#lower-level-progress-bar').width("17%");
+        
         break;
       case "ENGL 120":
         $('#ENGL1XX').css('background-image', 'url("app/img/ENGL120.png")');
         $('#ENGL1XX').css('background-size', 'contain');
+
+        oldwidth = $('#cpsc-100-progress-bar').width();
+        newwidth = (oldwidth / barwidth * 100) + 10;
+        $('#cpsc-100-progress-bar').width(newwidth + "%");
+        
+        $('#arts-progress-bar').width("33%");
+        
         break;
       case "CPSC 213":
         $('#CPSC213').css('background-image', 'url("app/img/CPSC213.png")');
         $('#CPSC213').css('background-size', 'contain');
+        
+        oldwidth = $('#cpsc-200-progress-bar').width();
+        newwidth = (oldwidth / barwidth * 100) + 15;
+        $('#cpsc-200-progress-bar').width(newwidth + "%");
+        
         break;
       case "CPSC 221":
         $('#CPSC221').css('background-image', 'url("app/img/CPSC221.png")');
         $('#CPSC221').css('background-size', 'contain');
+        
+        oldwidth = $('#cpsc-200-progress-bar').width();
+        newwidth = (oldwidth / barwidth * 100) + 15;
+        $('#cpsc-200-progress-bar').width(newwidth + "%");
+        
         break;
       
     }
