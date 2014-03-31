@@ -21,34 +21,34 @@ body {
 }
 
 .invisibleDIV {
-  height: 40px;
-  width: 151px;
-  <!--border: 5px solid red;-->
+  height: 41px;
+  width: 130px;
+  /*border: 3px solid red;*/
   z-index: 1;
 }
 
 #BIOL1XX {
   position: relative;
-  top: -130px;
-  left: 21px;
+  top: -153px;
+  left: 29px;
 }
 
 #ENGL1XX {
   position: relative;
-  top: -90px;
-  left: 21px;
+  top: -109px;
+  left: 29px;
 }
 
 #CPSC213 {
   position: relative;
-  top: -400px;
-  left: 358px;
+  top: -409px;
+  left: 375px;
 }
 
 #CPSC221 {
   position: relative;
-  top: -470px;
-  left: 528px;
+  top: -475px;
+  left: 555px;
 }
 
 #trophycaserow {
@@ -111,4 +111,13 @@ body {
 .btn-unlocked .badge {
   color: #368e5a;
   background-color: #fff;
+}
+
+/* Progress bar style */
+.progress-bar-tc {
+  background-color: #6184a1;
+}
+
+.progress-bar-tc_saved {
+  background-color: #91a9be;
 }
