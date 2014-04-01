@@ -77,7 +77,7 @@ var updateBars = function() {
     "cpsc-100": [24, 0, 30],
     "cpsc-200": [0, 21, 30],
     "lower-level": [15, 0, 18],
-    "arts": [9, 3, 18]
+    "arts": [12, 3, 18]
   };
 
   var creditsForPromotion = 0;
