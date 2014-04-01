@@ -8,6 +8,7 @@ var showBiol1XX = function() {
   } else {
     showCourse("BIOL 121", "Genetics, Evolution, and Ecology");
   }
+  location.hash = "#informationpanel";
 };
 
 var showBIOL121 = function() {
@@ -21,12 +22,14 @@ var showCommunications = function() {
   } else {
     showCourse("ENGL 120", "Literature and Criticism");
   }
+  location.hash = "#informationpanel";
 };
 
 var showGrades = function(course) {
 	$("#informationpanel").load("app/snippets/ipGrades.html", function() {
 		$("#grades").html(course);
 	});
+  location.hash = "#informationpanel";
 }
 
 var showCourse = function(courseNumber, courseName) {
@@ -39,6 +42,7 @@ var showCourse = function(courseNumber, courseName) {
 			$('#addCourseButton').addClass('btn-danger');
 			$('#addCourseButton').html('<span class="glyphicon glyphicon-minus"></span> Drop');
 		}
+    location.hash = "#informationpanel";
 	});
 }
 
@@ -107,9 +111,9 @@ var updateBars = function() {
     var base_cr = bar_id_map[bar_id][0]
     var worklist_cr = bar_id_map[bar_id][1]
     var total_cr = bar_id_map[bar_id][2]
-    $("#progress-" + bar_id).attr("data-original-title", "" + base_cr +" / " + total_cr + " credits completed (" + worklist_cr + " credits in worklist)");
+    $(".progress-" + bar_id).attr("data-original-title", "" + base_cr +" / " + total_cr + " credits completed (" + worklist_cr + " credits in worklist)");
     var width = parseInt(100.0 * worklist_cr / total_cr);
-    $("#progress-bar-" + bar_id).attr("style", "width:" + width + "%");
+    $(".progress-bar-" + bar_id).attr("style", "width:" + width + "%");
   }
 }
 
@@ -117,28 +121,35 @@ var updateIcons = function() {
   if (worklist.indexOf("BIOL 121") > -1) {
         $('#BIOL1XX').css('background-image', 'url("app/img/BIOL121.png")');
         $('#BIOL1XX').css('background-size', 'contain');
+        $(".span-biol").html("<span class='glyphicon glyphicon-floppy-disk'></span> BIOL 121 <span class='badge'>3 credits</span>");
+        $(".btn-biol").attr("onclick","showCourse('BIOL 121', 'Genetics, Evolution, and Ecology')");
   }
   if (worklist.indexOf("ENGL 120") > -1) {
         $('#ENGL1XX').css('background-image', 'url("app/img/ENGL120.png")');
         $('#ENGL1XX').css('background-size', 'contain');
-  }
-  if (worklist.indexOf("CPSC 213") > -1) {
+        $(".span-engl").html("<span class='glyphicon glyphicon-floppy-disk'></span> ENGL 120 <span class='badge'>3 credits</span>");
+        $(".btn-engl").attr("onclick","showCourse('ENGL 120', 'Literature and Criticism')");
+  } if (worklist.indexOf("CPSC 213") > -1) {
         $('#CPSC213').css('background-image', 'url("app/img/CPSC213.png")');
         $('#CPSC213').css('background-size', 'contain');
+        $("#span-cpsc213").html("<span class='glyphicon glyphicon-floppy-disk'></span> CPSC 213 <span class='badge'>4 credits</span>");
   }
   if (worklist.indexOf("CPSC 221") > -1) {
         $('#CPSC221').css('background-image', 'url("app/img/CPSC221.png")');
         $('#CPSC221').css('background-size', 'contain');
+        $("#span-cpsc221").html("<span class='glyphicon glyphicon-floppy-disk'></span> CPSC 221 <span class='badge'>4 credits</span>");
   }
 }
 
 var showCoursetree = function() {
+  $("#coursetree").attr("style", "'height: 500px; margin-left: -5px; margin-right: 0px;'")
 	$("#coursetree").load("app/snippets/ctMain.html", function() {
     updateIcons();
   });
 }
 
 var showWorklist = function() {
+  $("#coursetree").attr("style","margin-left: -5px; margin-right: 0px;");
 	$("#coursetree").load("app/snippets/ctWorklist.html", function() {
     updateWorklist();
   });
@@ -153,8 +164,4 @@ var courseNameToID = function(courseName) {
 var updateWorklist = function() {
   var i;
   for (i = 0; i < worklist.length; ++i) {
-    var course = worklist[i];
-    var courseID = courseNameToID(course);
-    $("#tr-" + courseID).removeClass("hidden");
-  }
-}
+    var course = worklist[i]; var courseID = courseNameToID(course); $("#tr-" + courseID).removeClass("hidden"); } }

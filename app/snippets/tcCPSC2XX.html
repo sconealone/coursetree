@@ -6,17 +6,17 @@
 <div class="container-fluid">
   <div class="row">
   Promotion to 3rd year:
-    <div class="progress" data-toggle="tooltip" title="21 / 48 credits completed (13 credits in worklist)">
+    <div class="progress progress-promotion" data-toggle="tooltip" title="21 / 48 credits completed (13 credits in worklist)">
       <div class="progress-bar progress-bar-tc" style="width:44%"><!--21 (+13) / 48 credits--></div>
-      <div class="progress-bar progress-bar-tc_saved" style="width:27%"></div>
+      <div class="progress-bar progress-bar-tc_saved progress-bar-promotion" style="width:27%"></div>
     </div>
   </div>
   
   <div class="row">
     Graduation:
-    <div class="progress" data-toggle="tooltip" title="32 / 120 credits completed (16 credits in worklist)">
+    <div class="progress progress-graduation" data-toggle="tooltip" title="32 / 120 credits completed (16 credits in worklist)">
       <div class="progress-bar progress-bar-tc" style="width:27%"><!--32 (+16) / 120 credits--></div>
-      <div class="progress-bar progress-bar-tc_saved" style="width:13%"></div>
+      <div class="progress-bar progress-bar-tc_saved progress-bar-graduation" style="width:13%"></div>
     </div>
   </div>
 </div>
@@ -39,14 +39,14 @@
   </div>
 
   <div class="row" id="trophycaserow">
-    <button class="btn btn-unlocked" data-toggle="tooltip" title="Required CPSC course" onclick="showCourse('CPSC 213', 'Introduction to Computer Systems')">
-      <span class="glyphicon"><img src="app/img/glyphicons_204_unlock.png" border=0></img></span> CPSC 213  <span class="badge">4 credits</span>
+    <button id="btn-cpsc213" class="btn btn-unlocked" data-toggle="tooltip" title="Required CPSC course" onclick="showCourse('CPSC 213', 'Introduction to Computer Systems')">
+      <span id="span-cpsc213"><span class="glyphicon"><img src="app/img/glyphicons_204_unlock.png" border=0></img></span> CPSC 213  <span class="badge">4 credits</span></span>
     </button>
   </div>
 
   <div class="row" id="trophycaserow">
-    <button class="btn btn-unlocked" data-toggle="tooltip" title="Required CPSC course" onclick="showCourse('CPSC 221', 'Basic Algorithms and Data Structures')">
-      <span class="glyphicon"><img src="app/img/glyphicons_204_unlock.png" border=0></img></span> CPSC 221  <span class="badge">4 credits</span>
+    <button id="btn-cpsc221" class="btn btn-unlocked" data-toggle="tooltip" title="Required CPSC course" onclick="showCourse('CPSC 221', 'Basic Algorithms and Data Structures')">
+      <span id='span-cpsc221'><span class="glyphicon"><img src="app/img/glyphicons_204_unlock.png" border=0></img></span> CPSC 221  <span class="badge">4 credits</span></span>
     </button>
   </div>
 
