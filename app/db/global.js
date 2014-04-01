@@ -1,1 +1,1 @@
-worklist = [];
+var worklist = [];

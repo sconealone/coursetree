@@ -4,5 +4,6 @@ $(document).ready(function() {
 	$("#coursetree").load("app/snippets/ctMain.html");
 	$("#informationpanel").load("app/snippets/ipMain.html");
 	$("#controlpanel").load("app/snippets/cpMain.html");
+  updateBars();
 });
 
