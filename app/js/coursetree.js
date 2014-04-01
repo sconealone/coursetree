@@ -80,18 +80,27 @@ var updateBars = function() {
     "arts": [9, 3, 18]
   };
 
+  var creditsForPromotion = 0;
+  var coursesForPromotion = [];
+
   var credits = 3;
   if (worklist.indexOf("BIOL 121") > -1) {
     bar_id_map['cpsc-100'][1] += credits;
     bar_id_map['lower-level'][1] += credits;
     bar_id_map['promotion'][1] += credits;
     bar_id_map['graduation'][1] += credits;
+  } else {
+    coursesForPromotion.push("BIOL 121");
+    creditsForPromotion += credits;
   }
   if (worklist.indexOf("ENGL 120") > -1) {
     bar_id_map['cpsc-100'][1] += credits;
     bar_id_map['arts'][1] += credits;
     bar_id_map['promotion'][1] += credits;
     bar_id_map['graduation'][1] += credits;
+  } else {
+    coursesForPromotion.push("ENGL 120");
+    creditsForPromotion += credits;
   }
 
   credits = 4;
@@ -99,11 +108,17 @@ var updateBars = function() {
     bar_id_map['cpsc-200'][1] += credits;
     bar_id_map['promotion'][1] += credits;
     bar_id_map['graduation'][1] += credits;
+  } else {
+    coursesForPromotion.push("CPSC 213");
+    creditsForPromotion += credits;
   }
   if (worklist.indexOf("CPSC 221") > -1) {
     bar_id_map['cpsc-200'][1] += credits;
     bar_id_map['promotion'][1] += credits;
     bar_id_map['graduation'][1] += credits;
+  } else {
+    coursesForPromotion.push("CPSC 221");
+    creditsForPromotion += credits;
   }
 
   // Go through each progress bar and update its tooltip text and width
@@ -111,10 +126,23 @@ var updateBars = function() {
     var base_cr = bar_id_map[bar_id][0]
     var worklist_cr = bar_id_map[bar_id][1]
     var total_cr = bar_id_map[bar_id][2]
-    $(".progress-" + bar_id).attr("data-original-title", "" + base_cr +" / " + total_cr + " credits completed (" + worklist_cr + " credits in worklist)");
+    if (bar_id === "promotion" && coursesForPromotion.length > 0) {
+      var msg = "You need the following courses to be promoted: "
+      for (var j = 0; j < coursesForPromotion.length; ++j) {
+        if (j != 0) {
+          msg += ", "
+        }
+        msg += coursesForPromotion[j];
+      }
+      $(".progress-promotion").attr("data-original-title", msg);
+    } else {
+      $(".progress-" + bar_id).attr("data-original-title", "" + base_cr +" / " + total_cr + " credits completed (" + worklist_cr + " credits in worklist)");
+    }
     var width = parseInt(100.0 * worklist_cr / total_cr);
     $(".progress-bar-" + bar_id).attr("style", "width:" + width + "%");
   }
+
+  $(".p-credit-summary").html("Total: " + base_cr +" / " + total_cr + " credits completed<br>(" + worklist_cr + " credits in worklist)");
 }
 
 var updateIcons = function() {
