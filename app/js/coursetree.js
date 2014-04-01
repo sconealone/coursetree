@@ -3,7 +3,11 @@ var showCPSC221 = function() {
 };
 
 var showBiol1XX = function() {
-  $("#informationpanel").load("app/snippets/ipBIOL1XX.html");
+  if (worklist.indexOf("BIOL 121") < 0) {
+    $("#informationpanel").load("app/snippets/ipBIOL1XX.html");
+  } else {
+    showCourse("BIOL 121", "Genetics, Evolution, and Ecology");
+  }
 };
 
 var showBIOL121 = function() {
@@ -12,7 +16,11 @@ var showBIOL121 = function() {
 
 // A list of courses that fulfill the communications requirement
 var showCommunications = function() {
-  $("#informationpanel").load("app/snippets/ipCommunications.html");
+  if (worklist.indexOf("ENGL 120") < 0) {
+    $("#informationpanel").load("app/snippets/ipCommunications.html");
+  } else {
+    showCourse("ENGL 120", "Literature and Criticism");
+  }
 };
 
 var showGrades = function(course) {
@@ -35,14 +43,6 @@ var showCourse = function(courseNumber, courseName) {
 }
 
 
-var showCoursetree = function() {
-	$("#coursetree").load("app/snippets/ctMain.html");
-}
-
-var showWorklist = function() {
-	$("#coursetree").load("app/snippets/ctWorklist.html");
-}
-
 var addCourse = function() {
 	if ($('#addCourseButton').hasClass('btn-success')) {
 		$('#addCourseButton').removeClass('btn-success');
@@ -55,6 +55,7 @@ var addCourse = function() {
 		$('#addCourseButton').html('Added');
 		var course = $('#sectionCourse').text();
 		worklist.push(course);
+    updateWorklist();
     updateBars(worklist);
     updateIcons();
   }
@@ -101,11 +102,12 @@ var updateBars = function() {
     bar_id_map['graduation'][1] += credits;
   }
 
+  // Go through each progress bar and update its tooltip text and width
   for (var bar_id in bar_id_map) {
     var base_cr = bar_id_map[bar_id][0]
     var worklist_cr = bar_id_map[bar_id][1]
     var total_cr = bar_id_map[bar_id][2]
-    $("#progress-" + bar_id).attr("title", "" + base_cr +" / " + total_cr + " credits completed (" + worklist_cr + " credits in worklist)");
+    $("#progress-" + bar_id).attr("data-original-title", "" + base_cr +" / " + total_cr + " credits completed (" + worklist_cr + " credits in worklist)");
     var width = parseInt(100.0 * worklist_cr / total_cr);
     $("#progress-bar-" + bar_id).attr("style", "width:" + width + "%");
   }
@@ -127,5 +129,32 @@ var updateIcons = function() {
   if (worklist.indexOf("CPSC 221") > -1) {
         $('#CPSC221').css('background-image', 'url("app/img/CPSC221.png")');
         $('#CPSC221').css('background-size', 'contain');
+  }
+}
+
+var showCoursetree = function() {
+	$("#coursetree").load("app/snippets/ctMain.html", function() {
+    updateIcons();
+  });
+}
+
+var showWorklist = function() {
+	$("#coursetree").load("app/snippets/ctWorklist.html", function() {
+    updateWorklist();
+  });
+}
+
+var courseNameToID = function(courseName) {
+  var tokens = courseName.split(" ");
+  var retID = tokens[0].toLowerCase() + tokens[1];
+  return retID;
+}
+
+var updateWorklist = function() {
+  var i;
+  for (i = 0; i < worklist.length; ++i) {
+    var course = worklist[i];
+    var courseID = courseNameToID(course);
+    $("#tr-" + courseID).removeClass("hidden");
   }
 }

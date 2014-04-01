@@ -1,5 +1,7 @@
 var showMain = function() {
-	$("#trophycase").load("app/snippets/tcMain.html");
+	$("#trophycase").load("app/snippets/tcMain.html", function() {
+    updateBars();
+  });
 }
 var showLowerScience = function() {
 	$("#trophycase").load("app/snippets/tcLowerScience.html")
